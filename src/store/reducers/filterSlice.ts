@@ -1,6 +1,4 @@
-import { IToDoItem } from '../../interfaces/IToDoItem';
 import { createSlice } from '@reduxjs/toolkit';
-import { IToDoItem } from '../../interfaces/IToDoItem';
 
 interface IInitialState {
     filter: 'all' | 'active' | 'completed';

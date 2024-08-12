@@ -1,6 +1,5 @@
 import './App.css';
 import { Box, Button, Flex, Heading, Input } from '@chakra-ui/react';
-import ToDoItem from './components/ToDoItem';
 import ToDoList from './components/ToDoList';
 import { useAppDispatch } from './store/store';
 import { useState } from 'react';
@@ -15,14 +14,22 @@ function App() {
     dispatch(addTodo(newToDoValue));
     setNewToDoValue('');
   };
+
+  const handleEnterSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      dispatch(addTodo(newToDoValue));
+      setNewToDoValue('');
+    }
+  };
   return (
     <>
-      <Box p={10} borderRadius={10}>
+      <Box p={10} borderRadius={10} minW={600} maxW={800}>
         <Heading as="h2" size="3xl" noOfLines={1} pb={6}>
           TODOS
         </Heading>
         <Flex>
           <Input
+            onKeyDown={handleEnterSubmit}
             placeholder="New task"
             value={newToDoValue}
             onChange={(e) => setNewToDoValue(e.target.value)}

@@ -5,12 +5,15 @@ import './index.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import { store } from './store/store.ts';
 import { Provider } from 'react-redux';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
       <ChakraProvider>
-        <App />
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </ChakraProvider>
     </Provider>
   </StrictMode>,

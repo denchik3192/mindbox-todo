@@ -12,11 +12,11 @@ const ToDoItem: React.FC<IToDoItemProps> = ({ item }) => {
   const dispatch = useAppDispatch();
   return (
     <>
-      <Flex align={'center'} p={3} borderBottom={'1px solid #CFCFCF'}>
+      <Flex align={'center'} p={2} borderBottom={'1px solid #CFCFCF'}>
         <Checkbox
           onChange={() => dispatch(changeToDoStatus(item.id))}
           size="lg"
-          colorScheme="orange"
+          colorScheme="teal"
           isChecked={item.checked}
         />
         <Text fontSize="xl" ml={4} style={{ textDecoration: item.checked ? 'line-through' : '' }}>
