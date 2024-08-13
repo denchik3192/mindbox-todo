@@ -3,14 +3,14 @@ import { Box, Button, Flex, Heading, Input } from '@chakra-ui/react';
 import ToDoList from './components/ToDoList';
 import { useAppDispatch } from './store/store';
 import { useState } from 'react';
-import { addTodo } from './store/reducers/todoSlice';
 import { Plus } from 'lucide-react';
+import { addTodo } from './store/reducers/toDoSlice';
 
 function App() {
   const [newToDoValue, setNewToDoValue] = useState('');
   const dispatch = useAppDispatch();
 
-  const hadleClick = () => {
+  const handleClick = () => {
     dispatch(addTodo(newToDoValue));
     setNewToDoValue('');
   };
@@ -34,7 +34,7 @@ function App() {
             value={newToDoValue}
             onChange={(e) => setNewToDoValue(e.target.value)}
           />
-          <Button colorScheme="teal" mr={3} onClick={hadleClick} ml={2}>
+          <Button colorScheme="teal" mr={3} onClick={handleClick} ml={2}>
             Add <Plus size={'30px'} />
           </Button>
         </Flex>

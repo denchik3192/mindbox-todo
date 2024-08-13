@@ -34,11 +34,11 @@ export const toDoSlice = createSlice({
     name: 'todos',
     initialState,
     reducers: {
-        addTodo(state, action: PayloadAction<IToDoItem>) {
+        addTodo(state, action: PayloadAction<string>) {
             const newId = Math.random();
             state.todos.push({
                 id: newId,
-                title: String(action.payload),
+                title: action.payload,
                 checked: false
             });
         },
