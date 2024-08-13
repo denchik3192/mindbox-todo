@@ -2,10 +2,10 @@ import ToDoItem from './ToDoItem';
 import { Badge, Box, Button, Flex } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 import { selectFilter, selectFilteredToDos } from '../store/selectors/selectToDos';
-import { clearCompleted } from '../store/reducers/todoSlice';
 import { useAppDispatch } from '../store/store';
 import { changeFilter } from '../store/reducers/filterSlice';
 import { motion } from 'framer-motion';
+import { clearCompleted } from '../store/reducers/toDoSlice';
 
 const fadeInAnimationVariants = {
   initial: { opacity: 0, y: 20 },
