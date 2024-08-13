@@ -1,5 +1,5 @@
-#mindbox-todo
-##Run project: npm start 
+# mindbox-todo
+## Run project: npm start 
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
