@@ -2,7 +2,7 @@ import { Button, Checkbox, Flex, Text } from '@chakra-ui/react';
 import { IToDoItem } from '../interfaces/IToDoItem';
 import { useAppDispatch } from '../store/store';
 import { Trash2 } from 'lucide-react';
-import { changeToDoStatus, deleteTodo } from '../store/reducers/todoSlice';
+import { changeToDoStatus, deleteTodo } from '../store/reducers/toDoSlice';
 
 interface IToDoItemProps {
   item: IToDoItem;
