@@ -55,10 +55,10 @@ function App() {
             ) : (
               <FormErrorMessage>Task is required.</FormErrorMessage>
             )}
-            <Button colorScheme="teal" mr={3} onClick={handleClick} ml={2}>
-              Add <Plus size={'30px'} />
-            </Button>
           </FormControl>
+          <Button colorScheme="teal" mr={3} onClick={handleClick} ml={2}>
+            Add <Plus size={'30px'} />
+          </Button>
         </Flex>
         <ToDoList />
       </Box>
